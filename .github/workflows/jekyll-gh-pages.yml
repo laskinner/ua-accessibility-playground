@@ -25,9 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4 # repo checkout
 
-      # Install Rust Nightly Toolchain
-      - name: Install nightly Rust
-        uses: dtolnay/rust-toolchain@nightly
+      # Install Rust Stable Toolchain
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable # changed from nightly to stable
         with:
           components: clippy, rustfmt
 
@@ -47,13 +47,13 @@ jobs:
 
       # GitHub Pages Setup and Deployment
       - name: Setup Pages
-        uses: actions/configure-pages@v5 # latest as of now
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3 # v3 is latest for this action
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
       - name: Deploy to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages@v4 # bumped to v4
+        uses: actions/deploy-pages@v4
