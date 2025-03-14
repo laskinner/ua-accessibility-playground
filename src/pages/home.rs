@@ -42,7 +42,9 @@ pub fn Home() -> impl IntoView {
                 <h1>
                     "Welcome to the (very) unofficial UWA playground for accessibility features"
                 </h1>
-
+                <p>
+                    "Here you'll find a project with many accessibility easter eggs. See if you can find them all!"
+                </p>
                 <div class="buttons">
                     <Button />
                     <Button increment=5 />
