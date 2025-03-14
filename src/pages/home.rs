@@ -39,7 +39,9 @@ pub fn Home() -> impl IntoView {
                     />
                 </picture>
 
-                <h1>"Welcome to Leptos"</h1>
+                <h1>
+                    "Welcome to the (very) unofficial UWA playground for accessibility features"
+                </h1>
 
                 <div class="buttons">
                     <Button />
